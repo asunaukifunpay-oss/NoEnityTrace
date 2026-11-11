@@ -23,10 +23,12 @@ public final class NoEntityTraceClient implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (toggleKey.wasPressed()) {
-                // Keep this utility confined to a local singleplayer world.
+                // This client-side convenience is intentionally singleplayer-only.
                 if (!client.isInSingleplayer()) {
-                    client.player.sendMessage(Text.literal("NoEntityTrace works only in singleplayer."), true);
                     enabled = false;
+                    if (client.player != null) {
+                        client.player.sendMessage(Text.literal("NoEntityTrace works only in singleplayer."), true);
+                    }
                     continue;
                 }
 
