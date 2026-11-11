@@ -11,7 +11,7 @@ In singleplayer, press `]` to toggle player filtering in the crosshair entity ra
 Requires Java 21.
 
 ```sh
-./gradlew build
+gradle build
 ```
 
 The built mod jar will be in `build/libs/`.
