@@ -2,7 +2,7 @@
 
 A small client-side Fabric mod for Minecraft 1.21.4.
 
-Press `] ` (right bracket) to toggle the player attack filter.
+Press `]` (right bracket) to toggle the player attack filter.
 
 - When enabled, your attack input is cancelled if the target is another player.
 - Mobs and other non-player entities can still be attacked normally.
