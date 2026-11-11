@@ -27,3 +27,13 @@ jobs:
 
       - name: Build mod
         run: gradle --no-daemon build --stacktrace
+
+      - name: Upload mod JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: NoEntityTrace-1.21.4
+          path: |
+            build/libs/*.jar
+            !build/libs/*-sources.jar
+          if-no-files-found: error
+          retention-days: 14
