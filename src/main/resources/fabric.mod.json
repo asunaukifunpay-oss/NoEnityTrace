@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "noentitytrace",
+  "version": "${version}",
+  "name": "NoEntityTrace",
+  "description": "Singleplayer-only player filtering for crosshair entity targeting.",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.noentitytrace.NoEntityTraceClient"]
+  },
+  "mixins": ["noentitytrace.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.4",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
